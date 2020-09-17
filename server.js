@@ -32,4 +32,4 @@ app.put('/image', (req, res) => entryCount.entryCount(req, res, db))
 
 app.post('/apicall', (req, res) => entryCount.apicall(req, res))
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
