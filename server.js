@@ -20,7 +20,9 @@ const db = knex({
 
 app.use(express.json())
 app.use(cors())
-app.get('/')
+app.get('/', (req, res) => {
+    res.json("Hello World")
+})
 
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt) })
 
